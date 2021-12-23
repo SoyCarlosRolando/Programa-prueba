@@ -46,7 +46,14 @@
 <script>
     let si= document.getElementById('si')
     si.addEventListener("click",function(e){
-        alert("TE DIJE QUE AL NO, LA MALOGRASTE")
+        alertify.confirm ("This",
+        function() {
+         alertify.success('Ok');
+            },
+            function (){
+                alertify.error('cancel');
+            }
+    );
     });
     let no= document.getElementById('no')
     no.addEventListener("mousemove",function(e){
